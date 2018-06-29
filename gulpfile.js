@@ -27,3 +27,18 @@ gulp.task('open', ['connect'], function () {
     gulp.src('dist/index.html')
         .pipe(open({uri: config.devBaseUrl + ':' + config.port + '/'}));
 });
+
+
+// copy dev files to dist
+gulp.task('html', function () {
+    gulp.src(config.paths.html)
+        .pipe(gulp.dest(config.paths.dist))
+        .pipe(connect.reload())
+});
+
+gulp.task('watch', function () {
+    gulp.watch(config.paths.html, ['html']);
+});
+
+// Default task
+gulp.task('default', ['html', 'open', 'watch']);
