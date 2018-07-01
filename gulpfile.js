@@ -66,14 +66,13 @@ gulp.task('css', function () {
 gulp.task('lint', function () {
     return gulp.src(config.paths.js)
         .pipe(lint({config: 'eslint.config.json'}))
-        .pipe(lint.format())
-        .pipe(connect.reload());
+        .pipe(lint.format());
 });
 
 gulp.task('watch', function () {
     gulp.watch(config.paths.html, ['html']);
     gulp.watch(config.paths.js, ['js', 'lint']);
-    gulp.watch(config.paths.css, ['css']);
+   // gulp.watch(config.paths.css, ['css']);
 });
 
 // Default task
