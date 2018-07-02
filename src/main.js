@@ -23,7 +23,6 @@ var App = React.createClass({
 
 function render() {
     var route = window.location.hash.substr(1);
-
     React.render(<App route={route} />, document.getElementById('app'));
 }
 
