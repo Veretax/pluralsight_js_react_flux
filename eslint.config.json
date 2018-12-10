@@ -1,5 +1,4 @@
 {
-  "root": true,
   "ecmaFeatures": {
     "jsx": true
   },
@@ -18,7 +17,7 @@
     "no-lone-blocks": 0
   },
   "globals": {
-    "jQuery": true,
-    "$": true
+    jQuery: true,
+    $: true
   }
 }
